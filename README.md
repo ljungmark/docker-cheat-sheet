@@ -1,10 +1,29 @@
 Docker Cheat Sheet
 ===============
 
+* [Containers](#user-content-containers)
+  * [Monitor](#user-content-containers-monitor)
 * [Save & Load](#user-content-save-and-load)
 
 
-# Save and load
+## Containers
+Monitor containers
+
+### Containers: Monitor
+
+Running containers
+```
+docker ps
+```
+
+
+All containers
+```
+docker ps -a
+```
+
+
+### Save and load
 
 Save a image to a .tar file
 ```
