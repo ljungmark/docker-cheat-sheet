@@ -14,7 +14,9 @@ Monitor containers
 | task | command |
 |:-----|:--------|
 | Running containers | `docker ps` |
+| Hash of running containers | `docker ps -q` |
 | All containers | `docker ps -a` |
+| Hash of all containers | `docker ps -aq` |
 
 
 ### Save and load
