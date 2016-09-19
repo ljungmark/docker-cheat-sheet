@@ -1,9 +1,25 @@
 Docker Cheat Sheet
 ===============
 
+* [Images](#user-content-images)
+  * [Monitor](#user-content-images-monitor)
 * [Containers](#user-content-containers)
   * [Monitor](#user-content-containers-monitor)
 * [Save & Load](#user-content-save-and-load)
+
+
+## Images
+Monitor images
+
+### Images: Monitor
+
+| task | command |
+|:-----|:--------|
+| All images | `docker images` |
+| Remove specific image(s) | `docker rmi <image_id> <image_id> ...` |
+| Remove dangling images | `docker image prune` |
+| Remove all unused images	 | `docker image prune --all` |
+| Remove all images	 | `docker rmi -f $(docker images -q)` |
 
 
 ## Containers
