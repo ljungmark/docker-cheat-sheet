@@ -9,7 +9,6 @@ Docker Cheat Sheet
 
 
 ## Images
-Monitor images
 
 | task | command |
 |:-----|:--------|
@@ -21,7 +20,6 @@ Monitor images
 
 
 ## Containers
-Monitor containers
 
 
 ### Containers: Monitor
@@ -32,19 +30,21 @@ Monitor containers
 | Hash of running containers | `docker ps -q` |
 | All containers | `docker ps -a` |
 | Hash of all containers | `docker ps -aq` |
+| Tail container logs | `docker logs -f <container name>` |
 
 
 ### Containers: Managing
 
 | task | command |
 |:-----|:--------|
+| Enter container | `docker exec -it <container name> sh/bash` |
 | Kill running containers | `docker kill $(docker ps -q)` |
 | Remove all exited containers | `docker container prune` |
 | Remove old containers | `docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm` |
 | Remove all containers	 | `docker rm -f $(docker ps -qa)` |
 
 
-### Save and load
+## Save and load
 
 | task | command |
 |:-----|:--------|
