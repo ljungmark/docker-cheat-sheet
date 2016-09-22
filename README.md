@@ -5,10 +5,12 @@ Docker Cheat Sheet
 * [Containers](#user-content-containers)
   * [Monitor](#user-content-containers-monitor)
   * [Managing](#user-content-containers-managing)
-* [Save & Load](#user-content-save-and-load)
+* [Volumes](#user-content-volumes)
 
 
 ## Images
+Read-only and stateless template for Docker containers.
+
 
 | task | command |
 |:-----|:--------|
@@ -17,9 +19,12 @@ Docker Cheat Sheet
 | Remove dangling images | `docker image prune` |
 | Remove all unused images	 | `docker image prune --all` |
 | Remove all images	 | `docker rmi -f $(docker images -q)` |
+| Save a image to a .tar file | `docker save -o <path to tar file> <image name>` |
+| Load image from a .tar file | `docker load -i <path to tar file>` |
 
 
 ## Containers
+Runnable instance of a Docker image.
 
 
 ### Containers: Monitor
@@ -44,9 +49,10 @@ Docker Cheat Sheet
 | Remove all containers	 | `docker rm -f $(docker ps -qa)` |
 
 
-## Save and load
+## Volumes
+Persistent, stateful data generated and used by containers.
 
 | task | command |
 |:-----|:--------|
-| Save a image to a .tar file | `docker save -o <path to tar file> <image name>` |
-| Load a .tar file | `docker load -i <path to tar file>` |
+| Running containers | `docker volume ps` |
+| Remove volumes | `docker volume rm $(docker volume ls -q)` |
