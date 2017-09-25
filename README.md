@@ -45,7 +45,7 @@ Runnable instance of a Docker image.
 | Enter container | `docker exec -it <container name> sh/bash` |
 | Kill running containers | `docker kill $(docker ps -q)` |
 | Remove all exited containers | `docker container prune` |
-| Remove old containers | `docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm` |
+| Remove old containers | `docker ps -a \| grep 'weeks ago' \| awk '{print $1}' \| xargs docker rm` |
 | Remove all containers	 | `docker rm -f $(docker ps -qa)` |
 
 
