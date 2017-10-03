@@ -13,14 +13,14 @@ Read-only and stateless template for Docker containers.
 
 
 | task | command |
-|:-----|:--------|
-| All images | `docker images` |
+|:-----|:-----|
+| List images | `docker images` |
 | Remove specific image(s) | `docker rmi <image_id> <image_id> ...` |
 | Remove dangling images | `docker image prune` |
-| Remove all unused images	 | `docker image prune --all` |
-| Remove all images	 | `docker rmi -f $(docker images -q)` |
-| Save a image to a .tar file | `docker save -o <path to tar file> <image name>` |
-| Load image from a .tar file | `docker load -i <path to tar file>` |
+| Remove all unused images | `docker image prune -a` |
+| Remove all images | `docker rmi -f $(docker images -q)` |
+| Save an image to a .tar file| `docker save -o <path to tar file> <image name>` |
+| Load an image from a .tar file| `docker load -i <path to tar file>` |
 
 
 ## Containers
