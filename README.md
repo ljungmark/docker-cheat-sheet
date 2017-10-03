@@ -30,24 +30,25 @@ Runnable instance of a Docker image.
 ### Containers: Monitor
 
 | task | command |
-|:-----|:--------|
-| Running containers | `docker ps` |
+|:-----| :-----|
+| List running containers | `docker ps` |
+| List all containers | `docker ps -a` |
 | Hash of running containers | `docker ps -q` |
-| All containers | `docker ps -a` |
 | Hash of all containers | `docker ps -aq` |
-| Tail container logs | `docker logs -f <container name>` |
+| Tail container logs | `docker logs -f --tail=0 <container name>`|
+| Create an image of a container | `docker export -o <path to tar file> <container name>`|
 
 
 ### Containers: Managing
 
 | task | command |
-|:-----|:--------|
+|:-----|:-----|
 | Enter container | `docker exec -it <container name> sh/bash` |
-| Kill running containers | `docker kill $(docker ps -q)` |
-| Remove all exited containers | `docker container prune` |
-| Remove old containers | `docker ps -a \| grep 'weeks ago' \| awk '{print $1}' \| xargs docker rm` |
-| Remove all containers	 | `docker rm -f $(docker ps -qa)` |
-
+| Stop container | `docker stop <container name>` |
+| Kill container | `docker kill <container name>` |
+| Remove all stopped containers | `docker container prune` |
+| Remove containers (incl. running) | `docker rm -f $(docker ps -qa)` |
+| Remove unused containers older than a week | `docker container prune --filter "until=168h"` |
 
 ## Volumes
 Persistent, stateful data generated and used by containers.
