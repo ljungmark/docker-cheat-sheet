@@ -54,6 +54,7 @@ Runnable instance of a Docker image.
 Persistent, stateful data generated and used by containers.
 
 | task | command |
-|:-----|:--------|
-| Running containers | `docker volume ps` |
-| Remove volumes | `docker volume rm $(docker volume ls -q)` |
+|:-----|:-----|
+| List volumes | `docker volume ls` |
+| Remove volume | `docker volume rm <volume name>`|
+| Remove unused volumes| `docker volume prune` |
