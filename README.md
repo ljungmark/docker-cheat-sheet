@@ -37,6 +37,7 @@ Runnable instance of a Docker image.
 | Hash of all containers | `docker ps -aq` |
 | Tail container logs | `docker logs -f --tail=0 <container name>`|
 | Create an image of a container | `docker export -o <path to tar file> <container name>`|
+| Get IP adress of a container | `docker inspect --format "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" <container name>` |
 
 
 ### Containers: Managing
