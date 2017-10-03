@@ -44,8 +44,8 @@ Runnable instance of a Docker image.
 
 | task | command |
 |:-----|:-----|
-| Enter container | `docker exec -it <container name> sh/bash` |
-| Enter temporary container (removed on exit) | `docker run -it --rm <image name> sh/bash` |
+| Enter container | `docker exec -it <container name> bash` |
+| Enter temporary container (removed on exit) | `docker run -it --rm <image name> bash` |
 | Stop container | `docker stop <container name>` |
 | Kill container | `docker kill <container name>` |
 | Remove all stopped containers | `docker container prune` |
