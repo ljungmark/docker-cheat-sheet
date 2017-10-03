@@ -51,6 +51,7 @@ Runnable instance of a Docker image.
 | Remove containers (incl. running) | `docker rm -f $(docker ps -qa)` |
 | Remove unused containers older than a week | `docker container prune --filter "until=168h"` |
 
+
 ## Volumes
 Persistent, stateful data generated and used by containers.
 
